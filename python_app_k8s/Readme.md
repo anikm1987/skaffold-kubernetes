@@ -1,13 +1,13 @@
 # Getting started with skaffold local kubernetes development with Docker for windows
 
-# Enable Kubernetes checkbox
+##### Enable Kubernetes checkbox
 
-# Change below context -
+##### Change below context -
 
 - kubectl config get-contexts
 - kubectl config use-context docker-for-desktop
 
-# Running the python app
+###### Running the python app
 
 - To run the application you can either use the flask command or python’s -m switch with Flask. Before you can do that you need to tell your terminal the application to work with by exporting the FLASK_APP environment variable:
 
@@ -21,11 +21,11 @@ $ flask run
 set FLASK_APP=hello.py
 python -m flask run
 
-# Created docker file and run it locally and it works
+- Created docker file and run it locally and it works
 
-# Created deployment and service yml file in the same folder structure to deploy the app in k8s
+- Created deployment and service yml file in the same folder structure to deploy the app in k8s
 
-# Run below commands -
+##### Run below commands -
 
 - skaffold init # initialize the skaffold.yaml file with all details
 
@@ -36,7 +36,7 @@ python -m flask run
 
 - For development practice best part is to enable live reload . The example is configure to do live reload fo any changes in hello.py file.
 
-# to verify whether pods or services are working below commands can be executed -
+##### to verify whether pods or services are working below commands can be executed -
 
 - kubectl get pods
 - kubectl get svc
@@ -44,7 +44,7 @@ python -m flask run
 
 
 
-# After deployment you can navigate to the application using below two URLs
+##### After deployment you can navigate to the application using below two URLs
 
 - http://localhost    - Refresh the page to get a new joke
 - http://localhost/fun - This will diplay message with emoji
